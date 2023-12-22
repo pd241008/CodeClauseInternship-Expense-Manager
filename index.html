@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Finance App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Finance Tracker</h1>
+        <div class="inc-exp-container">
+            <div>
+                <h4>Income</h4>
+                <p id="money-plus" class="money money-plus">$0.00</p>
+            </div>
+            <div>
+                <h4>Expense</h4>
+                <p id="money-minus" class="money money-minus">$0.00</p>
+            </div>
+        </div>
+
+        <!-- Added the balance element -->
+        <div id="balance">Balance: $0.00</div>
+
+        <h3>History</h3>
+        <ul id="list" class="list">
+            <!-- Transactions will be added here dynamically -->
+        </ul>
+
+        <h3>Add New Transaction</h3>
+        <form id="form">
+            <label for="text">Text</label>
+            <input type="text" id="text" placeholder="Enter text...">
+            <label for="amount">Amount <br>(negative - expense, positive - income)</label>
+            <input type="number" id="amount" placeholder="Enter amount...">
+            <button class="btn" type="submit">Add Transaction</button>
+        </form>
+
+        <!-- Save button -->
+        <button class="btn" id="saveButton">Save to File</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
