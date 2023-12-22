@@ -94,6 +94,43 @@ Init();
 
 form.addEventListener('submit', addTransaction);
 
+// Function to toggle theme
+function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+    body.classList.toggle('light-mode');
+}
+
+// Event listener for the Toggle Theme button
+document.getElementById('toggleThemeButton').addEventListener('click', toggleTheme);
+
+// Function to trigger file download
+function downloadFile(content, filename, contentType) {
+    const blob = new Blob([content], { type: contentType });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    a.click();
+}
+
+// Event listener for the Save button
+document.getElementById('saveButton').addEventListener('click', function () {
+    const htmlContent = document.documentElement.outerHTML;
+    const filename = 'index.html';
+    downloadFile(htmlContent, filename, 'text/html');
+});
+// Your existing JavaScript code remains unchanged
+
+// Function to toggle theme
+function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+    body.classList.toggle('light-mode');
+}
+
+// Event listener for the Toggle Theme button
+document.getElementById('toggleThemeButton').addEventListener('click', toggleTheme);
+
 // Function to trigger file download
 function downloadFile(content, filename, contentType) {
     const blob = new Blob([content], { type: contentType });
