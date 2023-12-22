@@ -90,7 +90,7 @@
 
   .btn {
     cursor: pointer;
-    background-color: #9c88ff;
+    background-color: #0ce03e;
     box-shadow: var(--box-shadow);
     color: #fff;
     border: 0;
@@ -150,3 +150,27 @@
   .list li:hover .delete-btn {
     opacity: 1;
   }
+/* Add this style to position buttons at the right corner */
+.container {
+  position: relative;
+}
+
+/* Light theme */
+body.light-mode {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Dark theme */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Position the buttons */
+#toggleThemeButton,
+#saveButton {
+  position: absolute;
+  top: 0px;
+  right: -500px;
+}
